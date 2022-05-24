@@ -1,0 +1,39 @@
+<main class="inner_main">
+    <div class="container">
+        <h2 style="font-family: Pangram-Bold; text-align: center;">My Airports</h2>
+        <hr>
+        
+        <div class="row" style="margin-bottom: 20px">
+            <div class="col-md-3 mysidebar">
+                <div class="row" style="padding: 10px;">
+                    <a  mdbBtn [routerLink]="['/my-posts']" type="button"  class="round-button-25-state-1 waves-light btn group-tap" style="margin-bottom: 20px !important;" mdbWavesEffect>Airports</a>
+                    <a mdbBtn [routerLink]="['/airparks']" type="button"  class="round-button-25-state-1 waves-light btn group-tap" style="margin-bottom: 20px !important;" mdbWavesEffect>Groups</a>
+                    
+                </div>
+            </div>
+            <div class="col-md-8" style="margin-top: 10px;">
+                <div class="col-md-4 pb-2"  *ngFor="let card of airports; let airportsindex = index" style="float:left;margin: auto 0;padding: 0 15px !important;">
+                    <mdb-card class="my-1 h-100">
+                        <mdb-card-img src="/assets/images/plane.jpg" alt="Card image cap" [routerLink]="['/airport/'+card.airport_id]"></mdb-card-img>
+                        <mdb-card-body>
+                          <mdb-card-title>
+                            <div style="text-align: center">
+                              <span style="font-weight: 600;">{{card.airport_name}}</span>
+                            </div>
+                          </mdb-card-title>
+                        </mdb-card-body>
+                        <mdb-card-footer >
+                          <a mdbBtn (click)="toggleSubscribe(card.airport_id)" class="round-button-25-state-2 text-center waves-light"
+                            mdbWavesEffect *ngIf="card.subscribed_state == 1">Unsubscribe</a>
+                          <a mdbBtn class="round-button-25-state-3 text-center waves-light" mdbWavesEffect
+                            *ngIf="card.subscribed_state == 2">Home Airport</a>
+                        </mdb-card-footer>
+        
+                    </mdb-card>
+                </div>
+                <a class="button" style="color: #0f75bc; font-weight: 600; cursor: pointer; margin: 10px;" (click)="airports_more()" *ngIf="airport_more">See more...</a>
+            </div>
+            
+        </div>
+    </div>
+</main>

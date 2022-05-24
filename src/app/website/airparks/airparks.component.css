@@ -1,0 +1,38 @@
+.search_form{
+    margin:15px;
+    display: flex !important;
+}
+.search_input{
+     padding-left: 30px  !important;
+    border-radius: 20px !important;
+    background-color: #eff1f3 !important;
+}
+
+
+.create-group-module{
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    border-style: none !important;
+    border-width: 0;
+    box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 8px;
+
+}
+.create-group-module-img{
+    margin: 20px auto 20px;
+    width: 70%;
+}
+
+.no-data{
+    min-height: 200px;
+    vertical-align: middle;
+}
+
+.group-tap{
+    font-size: 18px !important;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}   

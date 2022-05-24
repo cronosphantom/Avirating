@@ -1,0 +1,175 @@
+<div class="row m-3 no-gutters">
+    <div class="col-md-12 mb-1">
+        <div class="d-flex justify-content-between">
+            <h4>Report</h4>
+        </div>
+    </div>
+    <div class="my_container container">
+        <tabset>
+            <tab heading="Post">
+                <div class="tab_section">
+                    <div *ngFor="let report of postReports; let reportIndex = index">
+                        <div class="report_list" >
+                            <div class="report_content">
+                                <div style="display: flex;">
+                                    <span style="background-color: #ff3547; color: white; padding:0px 5px 0px 5px; border-radius: 5px;"> report </span>
+                                </div>
+                                <div class="p_content">
+                                    <app-read-more [text]="report.report_content" [maxLength]="100"></app-read-more>
+                                </div>
+                                <div class="post_header" style="margin-top: 10px">
+                                    <div class="p_avatar">
+                                    <img  [src]="api.getUserImageUrl(report.user.id)" alt=""  [routerLink]="['/customer-profile/'+report.user.id]" />
+                                    </div>
+                                    <div class="p_title">
+                                    <span class="p_user_name">{{report.user.first_name}} {{report.user.last_name}}</span>
+                                    <span class="p_time">{{ transform(report.duration)}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="reported_post_content">
+                                <div style="display: flex;">
+                                    <span style="background-color: #17A2B8; color: white; padding:0px 5px 0px 5px; border-radius: 5px;"> post </span>
+                                </div>
+                                <div class="p_content">
+                                    <app-read-more [text]="report.post.post_content" [maxLength]="100"></app-read-more>
+                                
+                                </div>
+                                <div class="post_header" style="margin-top: 10px; justify-content: space-between;">
+                                    <div style="display: flex;">
+                                        <div class="p_avatar">
+                                            <img  [src]="api.getUserImageUrl(report.post.user.id)" alt=""  [routerLink]="['/customer-profile/'+report.post.user.id]" />
+                                        </div>
+                                        <div class="p_title">
+                                            <span class="p_user_name">{{report.post.user.first_name}} {{report.post.user.last_name}}</span>
+                                            <span class="p_time">{{ transform(report.post.duration)}}</span>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="action">
+                                        <button mdbBtn type="button" (click)="approveReport(report.post.id, report.id, report.report_type, index)"
+                                            class="btn-sm btn-approve" color="primary" outline="true" mdbWavesEffect>Approve</button>
+                                        <button mdbBtn type="button" (click)="rejectReport(report.id, report.report_type, index)"
+                                            class="btn-sm btn-reject" color="danger" outline="true" mdbWavesEffect>Reject</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <a class="button" style="color: #0f75bc; font-weight: 600; cursor: pointer; margin: 10px;" (click)="postReports_more()" *ngIf="postReport_more">See more...</a>
+                </div>
+            </tab>
+            <tab heading="Commnet">
+                <div class="tab_section">
+                    <div *ngFor="let report of commentReports; let reportIndex = index">
+                        <div class="report_list" >
+                            <div class="report_content">
+                                <div style="display: flex;">
+                                    <span style="background-color: #ff3547; color: white; padding:0px 5px 0px 5px; border-radius: 5px;"> report </span>
+                                </div>
+                                <div class="p_content">
+                                    <app-read-more [text]="report.report_content" [maxLength]="100"></app-read-more>
+                                </div>
+                                <div class="post_header" style="margin-top: 10px;">
+                                    <div class="p_avatar">
+                                        <img  [src]="api.getUserImageUrl(report.user.id)" alt=""  [routerLink]="['/customer-profile/'+report.user.id]" />
+                                    </div>
+                                    <div class="p_title">
+                                        <span class="p_user_name">{{report.user.first_name}} {{report.user.last_name}}</span>
+                                        <span class="p_time">{{ transform(report.duration)}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="reported_post_content">
+                                <div style="display: flex;">
+                                    <span style="background-color: #28A745; color: white; padding:0px 5px 0px 5px; border-radius: 5px;"> comment </span>
+                                </div>
+                                <div class="p_content">
+                                    <app-read-more [text]="report.comment.comment_content" [maxLength]="100"></app-read-more>
+                                
+                                </div>
+                                <div class="post_header" style="margin-top: 10px; justify-content: space-between;">
+                                    <div style="display: flex;">
+                                        <div class="p_avatar">
+                                            <img  [src]="api.getUserImageUrl(report.comment.user.id)" alt=""  [routerLink]="['/customer-profile/'+report.comment.user.id]" />
+                                        </div>
+                                        <div class="p_title">
+                                            <span class="p_user_name">{{report.comment.user.first_name}} {{report.comment.user.last_name}}</span>
+                                            <span class="p_time">{{ transform(report.comment.duration)}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="action">
+                                        <button mdbBtn type="button" (click)="approveReport(report.comment.id, report.id, report.report_type, index)"
+                                            class="btn-sm btn-approve" color="primary" outline="true" mdbWavesEffect>Approve</button>
+                                        <button mdbBtn type="button" (click)="rejectReport(report.id, report.report_type, index)"
+                                            class="btn-sm btn-reject" color="danger" outline="true" mdbWavesEffect>Reject</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="button" style="color: #0f75bc; font-weight: 600; cursor: pointer; margin: 10px;" (click)="commentReports_more()" *ngIf="commentReport_more" >See more...</a>
+                </div>
+            </tab>
+            <tab heading="Reply">
+                <div class="tab_section">
+                    <div *ngFor="let report of replyReports; let reportIndex = index">
+                        <div class="report_list" >
+                            <div class="report_content">
+                                <div style="display: flex;">
+                                    <span style="background-color: #ff3547; color: white; padding:0px 5px 0px 5px; border-radius: 5px;"> report </span>
+                                </div>
+                                <div class="p_content">
+                                    <app-read-more [text]="report.report_content" [maxLength]="100"></app-read-more>
+                                </div>
+                                <div class="post_header" style="margin-top: 10px">
+                                    <div class="p_avatar">
+                                    <img  [src]="api.getUserImageUrl(report.user.id)" alt=""  [routerLink]="['/customer-profile/'+report.user.id]" />
+                                    </div>
+                                    <div class="p_title">
+                                        <span class="p_user_name">{{report.user.first_name}} {{report.user.last_name}}</span>
+                                        <span class="p_time">{{ transform(report.duration)}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="reported_post_content">
+                                <div style="display: flex;">
+                                    <span style="background-color: blue; color: white; padding:0px 5px 0px 5px; border-radius: 5px;"> reply </span>
+                                    
+                                </div>
+                                <div class="p_content">
+                                    <app-read-more [text]="report.reply.reply_content" [maxLength]="100"></app-read-more>
+                                
+                                </div>
+                                <div class="post_header" style="margin-top: 10px; justify-content: space-between;">
+                                    <div style="display: flex;">
+                                        <div class="p_avatar">
+                                            <img  [src]="api.getUserImageUrl(report.reply.user.id)" alt=""  [routerLink]="['/customer-profile/'+report.reply.user.id]" />
+                                        </div>
+                                        <div class="p_title">
+                                            <span class="p_user_name">{{report.reply.user.first_name}} {{report.reply.user.last_name}}</span>
+                                            <span class="p_time">{{ transform(report.reply.duration)}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="action">
+                                        <button mdbBtn type="button" (click)="approveReport(report.reply.id,report.id, report.report_type, index)"
+                                            class="btn-sm btn-approve" color="primary" outline="true" mdbWavesEffect>Approve</button>
+                                        <button mdbBtn type="button" (click)="rejectReport(report.id, report.report_type, index)"
+                                            class="btn-sm btn-reject" color="danger" outline="true" mdbWavesEffect>Reject</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="button" style="color: #0f75bc; font-weight: 600; cursor: pointer; margin: 10px;"(click)="replyReports_more()" *ngIf="replyReport_more"  >See more...</a>
+                </div>
+            </tab>
+         </tabset>
+        
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<main class="inner_main">
+    <div class="container">
+        <h2 style="font-family: Pangram-Bold; text-align: center;">My Friends</h2>
+    
+        <hr>
+        <div class="row" style="margin: 0px">
+            <div class="col-md-3 mysidebar">
+                <div class="row" style="padding: 10px;">
+                    <a  mdbBtn [routerLink]="['/my-posts']" type="button"  class="round-button-25-state-1 waves-light btn group-tap" style="margin-bottom: 20px !important;" mdbWavesEffect>Airports</a>
+                    <a mdbBtn [routerLink]="['/airparks']" type="button"  class="round-button-25-state-1 waves-light btn group-tap" style="margin-bottom: 20px !important;" mdbWavesEffect>Groups</a>
+                    
+                </div>
+            </div>
+            <div class="col-md-9" style="margin-top: 10px;">
+                <div class="col-sm-5 pb-2 friend_list" *ngFor="let friend of friends; " >
+                    <div class="friend_img">
+                        <img  [src]="api.getUserImageUrl(friend.friend_id)" alt="" [routerLink]="['/customer-profile/'+friend.friend_id]" />
+                    </div>
+                    <div class="friend_info">
+                        <p class="friend_name">
+                            {{friend.first_name}}  {{friend.last_name}}
+                        </p>
+                        <p class="friend_homeairport">
+                            {{friend.airport_name}}
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

@@ -1,0 +1,56 @@
+.container{
+    margin: auto;
+    max-width: 800px;
+}
+
+
+
+.search_form{
+    margin:15px;
+
+}
+
+.airport_section {
+    /* box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%); */
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group_list{
+  width: 100%;
+}
+
+.airport_image{
+    width: 40%;
+    padding: 10px;
+}
+
+.airport_description{
+    padding: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Roboto';
+    line-height: 2;
+    
+}
+
+.search_input{
+ 
+    padding-left: 30px  !important;
+    border-radius: 20px !important;
+    background-color: #eff1f3 !important;
+}
+
+
+.search_form{
+    display: flex !important;
+}
+
+.group-tap{
+    font-size: 18px !important;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}   

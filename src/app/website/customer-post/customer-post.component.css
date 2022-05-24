@@ -1,0 +1,17 @@
+
+.content-body-full{
+  white-space: pre-wrap;
+}
+
+h2, h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, HelveticaNeue, "Helvetica Neue", Helvetica, Roboto, "Segoe UI", Arial, sans-serif;
+}
+.content{
+  font-size: 18px;
+}
+
+
+button {
+  padding: 6px 12px;
+}
+

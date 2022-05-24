@@ -1,0 +1,623 @@
+/* You can add global styles to this file, and also import other style files */
+//@import url(https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css);
+@import "assets/css/bootstrap.min.css";
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import "assets/css/fonts.css";
+@import "assets/css/variables.scss";
+@import "assets/css/application.css";
+@import "assets/css/admin-panel.scss";
+@import "assets/css/website.scss";
+@import "assets/css/buttons.scss";
+@import "assets/css/input.scss";
+@import "assets/css/select.scss";
+@import "assets/css/checkbox.scss";
+@import "assets/css/radio-button.scss";
+@import "assets/css/badges.css";
+@import "assets/css/spinner.css";
+@import "assets/css/ialerts.scss";
+@import "assets/css/on-off-toggle.scss";
+@import "assets/css/typography.scss";
+@import "assets/css/responsive.css";
+
+body {
+    font-size: 0.9rem;
+}
+.page-wrapper.toggled .sidebar {
+    left: -300px;
+}
+.sidebar .ps.ps--scrolling-y > .ps__rail-y,
+.sidebar > .ps.ps--scrolling-x > .ps__rail-x,
+.ps .ps__rail-x:hover,
+.ps .ps__rail-y:hover,
+.ps .ps__rail-x:focus,
+.ps .ps__rail-y:focus,
+.ps .ps__rail-x.ps--clicking,
+.ps .ps__rail-y.ps--clicking {
+  background-color: transparent !important;
+}
+.sidebar .ps.ps--active-y > .ps__rail-y:hover,
+.sidebar > .ps.ps--active-y > .ps__rail-y.ps--clicking {
+  width: 10px !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+a {
+  
+    text-decoration: none !important;
+}
+
+.btn{
+     text-transform: initial !important;
+}
+.round-button-25-state-1 {
+  color: #007bff !important;
+  background-color: white;
+  border: 1px solid #007bff !important;
+  border-radius: 25px !important;
+  width: 100% !important;
+  height: 35px!important;
+  padding: .375rem .75rem!important;
+  margin: 0px !important;
+  text-transform: initial!important;
+}
+.round-button-25-state-1:hover {
+  color: white !important;
+  background-color: #007bff;
+}
+
+.round-button-25-state-2 {
+  color: coral !important;
+  background-color: white;
+  border: 1px solid coral !important;
+  border-radius: 25px !important;
+  width: 100% !important;
+  height: 35px!important;
+  padding: .375rem .75rem!important;
+  margin: 0px !important;
+  text-transform: initial!important;
+}
+.round-button-25-state-2:hover {
+  color: white !important;
+  background-color: coral;
+}
+
+.round-button-25-state-3 {
+  color: green !important;
+  background-color: white;
+  border: 1px solid green !important;
+  border-radius: 25px !important;
+  width: 100% !important;
+  height: 35px!important;
+  padding: .375rem .75rem!important;
+  margin: 0px !important;
+  text-transform: initial!important;
+}
+.round-button-25-state-3:hover {
+  color: white !important;
+  background-color: green;
+}
+
+.my_container{
+  margin-top: 20px;
+  padding: 10px;
+  max-width: 800px !important;
+}
+
+.badge {
+  padding: .25em .4em !important;
+}
+
+.nav-tabs{
+  border-top: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  border-left: 1px solid #dee2e6;
+  border-bottom:0px;
+  padding: 10px 10px 0px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tab-pane{
+  min-height: 200px;
+}
+
+
+.mysidebar{
+  margin-top: 10px;
+  box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+  padding-top: 20px;
+  max-height: 155px;
+  border-radius: 10px;
+  vertical-align: middle;
+  position: sticky;
+  top: 20px;
+  z-index: 9999;
+  background-color: white;
+}
+
+.card {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  border: 1px solid #ccc;
+  min-height: 370px;
+  padding: 0px;
+  border-radius: 10px;
+}
+.card-footer {
+  padding: .75rem 1.25rem;
+  background-color: rgb(0 0 0 / 0%);
+  border-top: none;
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/////////////////////////Group CSS///////////////
+.group_list{
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  margin: 0px 0px 8px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+  display: flex;
+  width: 100%;
+}
+
+.group_image{
+  width: 200px;
+  height: auto;
+}
+
+.group_image img{
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.group_body {
+  font-family: 'Pangram-Bold';
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  box-sizing: border-box;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  padding: 14px;
+  overflow-wrap: break-word;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.group_name{
+  font-family: 'Pangram-Bold';
+  box-sizing: border-box;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  line-height: 20px;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  
+}
+
+.group_join{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.join_btn{
+  background-color: #91f38a;
+  color: black !important;
+  font-weight: 600;
+  padding: 10px 30px;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+
+.website * {
+  font-family: "Pangram-Regular";
+}
+
+
+///////////////Post CSS//////////////////
+
+.submit-button{
+  color: white;
+  background: #4285f4;
+  padding: 9px 13px;
+  margin-left: 10px;
+}
+
+.createPostForm{
+text-align: center;
+padding: 20px;
+margin: 10px 0px 20px 0px;
+background-color: white;
+box-shadow: 0px 10px 80px -10px rgb(85 86 90 / 30%);
+box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+border-radius: 8px;
+margin-bottom: 8px;
+border: none;
+}
+
+.post_container {
+padding: 10px;
+max-width: 600px;
+}
+
+.post_div{
+display: flex;
+flex-flow: nowrap;
+width: 100%;
+margin-bottom: 10px;
+}
+
+.post_input{
+width: 100%;
+}
+
+.post_file{
+display: flex;
+margin-right: 10px;
+}
+
+
+.post_footer{
+font-size: 15px;
+font-weight: 400;
+line-height: 20px;
+box-sizing: border-box;
+text-rendering: optimizelegibility;
+-webkit-font-smoothing: antialiased;
+margin-bottom: 0px;
+width: 100%;
+padding-top: 10px;
+}
+
+.post_list{
+  padding: 20px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #0000001a;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.post_header{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p_avatar{
+  margin-right: 10px;
+}
+
+.p_avatar img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.p_user_name{
+  color: #000000 !important;
+  margin-left: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.32px;
+  text-transform:capitalize;
+}
+
+.p_time{
+  font-family: "Pangram-Regular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #6f7681;
+}
+
+.p_title{
+  display:grid;
+}
+
+.p_body{
+  width: 100%;
+  padding: 5px;
+}
+
+.p_content {
+  font-family: "Pangram-Regular";
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.32px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 20px;
+  color: #6f7681;
+  word-break: break-all;
+  margin-top: 10px;
+}
+
+.p_action{
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  
+}
+
+.post_action{
+  border-bottom: 1px solid #ccc;
+}
+
+.p_buttonGroup{
+  display: flex;
+}
+
+.post_action_button{
+  height: auto;
+  touch-action: none;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  letter-spacing: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-family: 'Pangram-Bold';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #6f7681 !important;
+  background-color: transparent;
+  padding: 6px 12px !important;
+}
+
+.post_action_button:hover {
+  background-color: transparent;
+  color: #6f7681;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.post_action_button:focus {
+  outline: none;
+}
+ 
+.post_action_count{
+  padding: 5px;
+}
+
+.post-assessments-view {
+  border: none;
+  margin-left: -5px;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+  opacity: 1;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: #fff;
+  color: #6f7681;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+  border: 1px solid #0000001a;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.emoticon:hover{
+  transform: scale(1.35);
+  transition: transform 0.15s ease-out;
+}
+
+.css-1biwvap {
+  font-family: 'Pangram-Bold';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  box-sizing: border-box;
+  display: flex;
+  margin-right: 32px;
+}
+
+.css-1chnb96{
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+  border-radius: 8px;
+  width: 100% !important;
+  min-height: 100px;
+  text-align: center;
+  padding: 30px;
+}
+
+
+.comment_container{
+  width: 100%;
+}
+
+.comment_list{
+  padding-top: 10px;
+  display: flex;
+}
+
+
+.p_input{
+  display: flex;
+  width: 100%;
+}
+
+.add_comment{
+  font-family: 'Pangram-Bold';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  box-sizing: border-box;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  width: 100%;
+}
+
+.reply-button-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.comment-composer-text-input, .comment-composer-text-input-prompt {
+  display: block;
+  outline: none;
+  position: relative;
+  width: 100%;
+  resize: none;
+  padding: 8px 12px 8px 20px !important;
+  font-size: 15px;
+  line-height: 20px;
+  border: 1px solid #928f8f !important;
+  border-radius: 20px;
+  background-color: #eff1f3;
+}
+
+
+
+.content-body-full{
+  white-space: pre-wrap;
+}
+
+.comment-composer-text-input, .comment-composer-text-input-prompt {
+  display: block;
+  outline: none;
+  position: relative;
+  width: 100%;
+  resize: none;
+  padding: 8px 12px 8px 20px !important;
+  font-size: 15px;
+  line-height: 20px;
+  border: 1px solid #928f8f !important;
+  border-radius: 20px;
+  background-color: #eff1f3;
+}
+
+.more_btn{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.delete_btn:hover {
+  color: #fff !important;
+  background-color: #dc3545  !important;
+  border-color: #dc3545  !important;
+}
+
+.delete_btn {
+  color: #fff !important;
+  background-color: #0f75bc  !important;
+  border-color: #0f75bc  !important;
+  position: relative;
+  left: -42px  !important;
+  top: -18px  !important;
+  padding: 3px 8px  !important;
+
+}
+
+.read-more{
+  color: #008fb2 !important;
+  font-weight: 500 !important;
+}
+
+
+.select2-container--default .select2-selection--single {
+
+  border: initial !important;
+  border-bottom: 1px solid #F1F1F1 !important;
+
+}
+
+.friend_list{
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  margin: 5px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+  padding: 10px;
+  min-height: 105px;
+  float: left;
+  display: flex;
+}
+
+.friend_info{
+  padding: 10px
+}
+
+.friend_img{
+  margin-right: 10px;
+}
+
+.friend_img img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.friend_name{
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Pangram-Bold';
+  text-transform:capitalize;
+}
+.friend_homeairport{
+  text-transform:capitalize;
+}
+
+.report_list{
+  padding: 20px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #0000001a;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}

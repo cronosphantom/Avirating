@@ -1,0 +1,8 @@
+.tab_section {
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    min-height: 300px;
+    border: 1px solid #dee2e6;
+    overflow: auto;
+}

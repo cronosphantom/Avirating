@@ -1,0 +1,44 @@
+<main class="inner_main container-fluid">
+  <div class="container post_container">
+    <p *ngIf="this.api.notifications.length == 0">No data found</p>
+    <div class="notification_list" *ngFor="let request of this.api.notifications; let index = index">
+     
+        <div>
+          <img class="sender_avatar" [src]="api.userImageUrl(request.sender_id)" alt="" [routerLink]="['/customer-profile/'+request.sender_id]" />
+        </div>
+        <div class="notification_body" >
+          <div class="notification_msg" [innerHTML]="request.notification_msg">
+            <!-- <span class="full-name" style='font-weight: 600;font-size: 15px;'>Arten Kovalova</span> wants to join the <span class="group-name"
+              style='font-weight: 600;font-size: 15px;'>private group test</span> airpark -->
+            {{request.notification_msg}}
+          </div>
+          
+        </div>
+    </div>
+    <div class="notification_list" *ngFor="let request of this.request; let index = index">
+     
+      <div>
+        <img class="sender_avatar" [src]="api.userImageUrl(request.sender_id)" alt="" [routerLink]="['/customer-profile/'+request.sender_id]" />
+      </div>
+      <div class="notification_body" >
+        <div class="notification_msg" [innerHTML]="request.notification_msg">
+          <!-- <span class="full-name" style='font-weight: 600;font-size: 15px;'>Arten Kovalova</span> wants to join the <span class="group-name"
+            style='font-weight: 600;font-size: 15px;'>private group test</span> airpark -->
+          {{request.notification_msg}}
+        </div>
+        <div class="notification_btn" *ngIf="request.type == 'join'">
+          <button mdbBtn type="button" (click)="approveRequest(request.id, request.type, index)"
+            class="btn-sm btn-approve" color="primary" outline="true" mdbWavesEffect>Approve</button>
+          <button mdbBtn type="button" (click)="rejectRequest(request.id, request.type, index)"
+            class="btn-sm btn-reject" color="danger" outline="true" mdbWavesEffect>Reject</button>
+        </div>
+        <div class="notification_btn"  *ngIf="request.type == 'friend'">
+          <button mdbBtn type="button" (click)="approveRequest(request.id, request.type, index)"
+            class="btn-sm btn-approve" color="primary" outline="true" mdbWavesEffect>Approve</button>
+          <button mdbBtn type="button" (click)="rejectRequest(request.id, request.type, index)"
+            class="btn-sm btn-reject" color="danger" outline="true" mdbWavesEffect>Reject</button>
+        </div>
+      </div>
+  </div>
+  </div>
+</main>
